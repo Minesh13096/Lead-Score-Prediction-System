@@ -28,12 +28,12 @@ class DataTransformation:
         
         '''
         try:
-            numerical_columns = ["writing_score", "reading_score"]
+            numerical_columns = ["Website Lead", "Social Media Lead","Referral Lead","total lead score"]
             categorical_columns = [
                 "gender",
                 "race_ethnicity",
                 "parental_level_of_education",
-                "lunch",
+                "Proposal Type",
                 "test_preparation_course",
             ]
 
@@ -85,8 +85,8 @@ class DataTransformation:
 
             preprocessing_obj=self.get_data_transformer_object()
 
-            target_column_name="math_score"
-            numerical_columns = ["writing_score", "reading_score"]
+            target_column_name="average lead score"
+            numerical_columns = ["Website Lead", "Social Media Lead","Referral Lead","total lead score"]
 
             input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)
             target_feature_train_df=train_df[target_column_name]
